@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+ 
+  <!-- Header with Logo, Navigation, and Name -->
+  <header>
+    <div class="header-content">
+      <!-- Logo (left side) -->
+      <div class="logo">
+        <img src="logo.jpg1.jpg" alt="Logo">
+      </div>
+
+      <!-- Navigation (center) -->
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="Experience Letter.html">Experience</a></li>
+        </ul>
+      </nav>
+
+      <!-- Your Name (right side) -->
+      <h1 class="site-name">Saboor Bukhari</h1>
+    </div>
+  </header>
+
+
+  <div class="container" style="text-align: center;">
+  <!-- Description + Button -->
+  <div class="service-card">
+    <h2>Experience Letter</h2>
+    <p>I worked as a Research Analyst at <b>Sentient Solutions</b>, where I conducted in-depth market research, analyzed data trends, and prepared reports to support strategic decision-making.</p>
+  </div>
+  <!-- Description + Button -->
+  <div class="service-card">
+    <button onclick="toggleExperienceLetter()">View Experience Letter</button>
+  </div>
+  <!-- PDF (hidden initially) -->
+  <iframe id="expLetter" src="Experience Letter - Saboor.pdf" width="600px" height="500px" style="display: none; margin: 0 auto;"></iframe>
+</div>
+
+<script>
+  function toggleExperienceLetter() {
+    var iframe = document.getElementById('expLetter');
+    if (iframe.style.display === 'block') {
+      iframe.style.display = 'none';
+      document.querySelector('button').innerHTML = 'View Experience Letter';
+    } else {
+      iframe.style.display = 'block';
+      document.querySelector('button').innerHTML = 'Hide Experience Letter';
+    }
+  }
+</script>
+
+</body>
+</html>
